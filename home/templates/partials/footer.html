@@ -1,0 +1,64 @@
+{% load static %}
+
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>IGNYT</h3>
+              <p>
+                178/6 14th main road, 
+             <br>20th, 50th Main Rd, 
+            <br> Kumaraswamy Layout, Bangalore
+
+                <br><br>
+                <strong>Phone:</strong> +918217779517<br>
+                <br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="http://www.twitter.com" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="http://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="http://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="http://www.skype.com" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="http://www.linkedin.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.github.com/danyel66">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.github.com/danyel66">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.github.com/danyel66">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to stay updated</p>
+            <form action="forms/subscribe.php" method="post">
+              <!-- <input type="email" name="email"> -->
+              {% csrf_token %}
+              {{news_form}}
+              <input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Ignyt</span></strong>. All Rights Reserved
+      </div>
+     
+    </div>
+  </footer>
