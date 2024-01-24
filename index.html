@@ -1,0 +1,1351 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ignyt- The Beer Longue</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>08217779517</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sun: 11AM - 23PM</span></i>
+      </div>
+      </div>
+      <div class="languages">
+        <ul>
+          <li>En</li>
+          <li><a href="#">De</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="{% url 'index' %}">IGNYT</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="{% static 'img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#specials">Blogs</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="book-a-table text-center"><a href="#book-a-table">Book a table</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+      
+    </div>
+    
+  </header><!-- End Header -->
+  <div class="fixed-top">
+    {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+        <div{% if message.tags %} class="alert alert-sm alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    </div>
+  
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    
+    <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>Ignyt</span></h1>
+          <h2>The Great Beer Longue!</h2>
+
+          <div class="btns">
+            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://youtu.be/Jl8lH9Pzv-I" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    {% include "partials/about.html" %}
+    <!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Us</h2>
+          <p>Why Choose Our Beer Longue ?</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Ambience</h4>
+              <p>Our beer lounge offers a super pleasant ambience. 
+                It's all about creating a cozy and inviting atmosphere where you can kick back, relax, and enjoy some quality time with friends. 
+                From the warm lighting to the comfortable seating, every detail is carefully curated to ensure that you feel right at home. 
+                Whether you're looking for a chill hangout spot or a lively place to socialize, our beer lounge has got the perfect ambience to make your experience truly enjoyable.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Food and Hygiene</h4>
+              <p>We offer an amazing variety of food and drinks. When it comes to our menu, we've got something for everyone's taste buds. 
+                From delectable appetizers to mouthwatering main courses, our culinary offerings are sure to satisfy your cravings. 
+                And let's not forget about the drinks! We have an extensive selection of beers from around the world, along with a range of other beverages to suit your preferences.
+                From the seating areas to the bar counter, we strive to provide a hygiene space where your favourite beers with peace of mind.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4>Pricing and Service </h4>
+              <p>We understand the value of offering affordable options without compromising on quality. 
+                Our pricing is designed to ensure that you can enjoy a great time without breaking the bank. And when it comes to service, our friendly and attentive staff is dedicated to providing you with a top-notch experience. 
+                So, get ready for a perfect combination of great prices, excellent service, and an all-around amazing time at our beer longue.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Menu Section ======= -->
+    {% load static %}
+<section id="menu" class="menu section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Menu</h2>
+      <p>Check Our Tasty Menu</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="menu-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-Pasta">PASTA</li>
+          <li data-filter=".filter-SSS">SOUPS, SALADS <br> <br> AND SANDWICH</li>
+          <li data-filter=".filter-Platters">PlATTERS</li>
+          <li data-filter=".filter-Main-course">MAIN-COURSE</li>
+          <li data-filter=".filter-BP">BREADS <br> <br> AND PIZZA</li>
+          <li data-filter=".filter-Specials">SPECIALS</li>
+          <li data-filter=".filter-Rn">RICE AND <br> <br> NOODLES</li>
+          <li data-filter=".filter-dd">DRINKS AND DESERTS</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-6 menu-item filter-Pasta">
+        <img src="/static/img/menu/alfredo.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">ALFREDO (VEG/NON-VEG)</a><span>Rs.240/299</span>
+        </div>
+      </div>    
+
+      <div class="col-lg-6 menu-item filter-Pasta">
+        <img src="/static/img/menu/mix sause.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">MIX SAUCE (VEG/NON-VEG)</a><span>Rs.250/299</span>
+        </div> 
+     </div>
+
+      <div class="col-lg-6 menu-item filter-Pasta">
+        <img src="/static/img/menu/pesto.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">PESTO (VEG/NON-VEG)</a><span>Rs.250/299</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-Pasta">
+        <img src="/static/img/menu/chicken carbonara.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CHICKEN CARBONARA</a><span>Rs.299</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-Pasta">
+        <img src="/static/img/menu/chicken sausage.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CHICKEN SAUSAGE PASTA</a><span>Rs.299</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/cream.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">SOUP - CREAM OF MUSHROOM (VEG/NON-VEG)</a><span>Rs.165/210</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/corn.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#"> SOUP - CREAM OF CORN (VEG/NON-VEG) </a><span>Rs.155/199</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/veg.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">MANCHOW SOUP (VEG/NON-VEG) </a><span>Rs.165/199</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/hot.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">HOT AND SOUR SOUP (VEG/NON-VEG)</a><span>Rs.165/210</span>
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/sa.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CAESER SALAD (VEG/NON-VEG)</a><span>Rs.199/229</span>
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/grill.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">GRILL CHICKEN SALAD</a><span>Rs.279</span>
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/greek.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">GREEK SALAD (VEG/NON-VEG)</a><span>Rs.199/249</span>
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/green.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">GREEN SALAD</a><span>Rs.139</span>
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-SSS">
+        <img src="/static/img/menu/grill veg.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">GRILL VEG SANDWICH</a><span>Rs.199</span>
+        </div>        
+    </div> 
+    <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/mush.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">PESTO MUSHROOM SANDWICH</a><span>Rs.220</span>
+      </div>
+    </div>   
+    <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/tomato.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">TOMATO MOZZARELLA SANDWICH</a><span>Rs.190</span>
+      </div>
+     </div> 
+     <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/spinach corn.jpeg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">SPINACH AND CORN SANDWICH</a><span>Rs.230</span>
+      </div>
+    </div>   
+    <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/grilled.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">GRILLED CHICKEN SANDWICH</a><span>Rs.299</span>
+      </div>
+    </div>    
+     <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/peri.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">PERI PERI CHICKEN SANDWICH</a><span>Rs.299</span>
+      </div>
+    </div>     
+    <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/PES.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">PESTO CHICKEN SANDWICH</a><span>Rs.289</span>
+      </div>
+    </div>   
+    <div class="col-lg-6 menu-item filter-SSS">
+      <img src="/static/img/menu/egg.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">EGG SANDWICH</a><span>Rs.229</span>
+      </div>
+    </div> 
+      <div class="col-lg-6 menu-item filter-Platters">
+        <img src="/static/img/menu/tandoor.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">TANDOOR VEG</a><span>Rs.699</span>
+        </div>
+        <div class="Includes">
+          &nbsp; Portion of Panner tikka, Mushroom lazeez tikka, Broccoli cheese tikki, Portion of Gobi Manchurian. (Served with salad and mint chutney)
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-Platters">
+        <img src="/static/img/menu/non.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">TANDOOR NON-VEG</a><span>Rs.899</span>
+        </div>
+        <div class="Includes">
+       &nbsp; Portion of Chicken lazeez tikka, Lasuni chicken tikka, Turkish kebab, Portion of Chicken Manchurian. (Served with salad and mint chutney)
+      </div>
+        </div>
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/Mushroom.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">MUSHROOM MASALA (VEG)</a><span>Rs.239</span>
+        </div>
+      </div>
+    
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/kadai.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">KADAI VEG</a><span>Rs.229</span>
+        </div>
+      </div>    
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/deewani.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">VEG DEEWANI HANDI</a><span>Rs.240</span>
+        </div>
+      </div>
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/kadai paneer.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">KADAI PANEER</a><span>Rs.220</span>
+        </div>
+      </div> 
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/tikka.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">PANEER TIKKA MASALA</a><span>Rs.250</span>
+        </div>
+      </div>    
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/do.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">PANEER DO PYAZA</a><span>Rs.240</span>
+        </div>
+      </div>  
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/kheema.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">PUNJABI PANEER KHEEMA MASALA</a><span>Rs.250</span>
+        </div>
+      </div>  
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/chicken do.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CHICKEN DO PYAZA</a><span>Rs.349</span>
+        </div>
+      </div>    
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/chickentikka.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">LAZEEZ CHICKEN TIKKA MASALA</a><span>Rs.349</span>
+        </div>
+      </div> 
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/hara.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CHICKEN HARA PYAAZ MASALA</a><span>Rs.349</span>
+        </div>
+      </div> 
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/kolhapuri.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CHICKEN KOLHAPURI</a><span>Rs.349</span>
+        </div>
+      </div> 
+      <div class="col-lg-6 menu-item filter-Main-course">
+        <img src="/static/img/menu/matar.jpg" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">CHICKEN KHEEMA MATAR MASALA</a><span>Rs.349</span>
+        </div>
+      </div> 
+       
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/roti.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">TANDOORI ROTI</a><span>Rs.40</span>
+      </div>
+    </div>   
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/butter.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BUTTER NAAN</a><span>Rs.50</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/garlic.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">GARLIC NAAN</a><span>Rs.60</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/kulcha.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BUTTER KULCHA</a><span>Rs.65</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/plain.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">PLAIN KULCHA</a><span>Rs.45</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/classic.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CLASSIC MARGHARITA PIZZA (8"/12")</a><span>Rs.199/229</span>
+      </div>
+    </div>   
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/farm.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">FARM VEG PIZZA (8"/12")</a><span>Rs.239/289</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/al.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">AL-FUNGHI PIZZA (8"/12")</a><span>Rs.229/289</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/indi.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">INDI PANEER TIKKA PIZZA (8"/12")</a><span>Rs.269/319</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/spicy.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">VEG SPICY TREAT PIZZA (8"/12")</a><span>Rs.219/279</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/load.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LOADED CHICKEN PIZZA (8"/12")</a><span>Rs.299/360</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/cls.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN CLASSIC SAUSAGE PIZZA (8"/12")</a><span>Rs.270/350</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/igsp.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">IGNYT SPECIAL PIZZA (8"/12")</a><span>Rs.330/399</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/pepp.jpeg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN PEPPERONI PIZZA (8"/12")</a><span>Rs.320/350</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-BP">
+      <img src="/static/img/menu/chti.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN TIKKA PIZZA (8"/12")</a><span>Rs.300/370</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/toiti.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">TOIT-TINIT-IN WIT : MUG (330ml / 500ml )</a><span>Rs.270/399</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/budweiser.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BUDWEISER PREMIUM : MUG (330ml)/ PITCHER (1.5L) / TOWER (3L) </a><span>Rs.230/1060/2100</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/magnum.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BUDWEISER MAGNUM: MUG (330ml) / PITCHER (1.5L) / TOWER (3L) </a><span>Rs.245/1250/2500</span>
+      </div>
+    </div>  
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/kingfisher.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">KINGFISHER PREMIUM :  MUG (330ml) / PITCHER (1.5L) / TOWER (3L) </a><span>Rs.199/999/1999</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/coc.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BEER COCKTAILS : BEER MOJITO / BEER SUNSET / MISS ROSY / GINGER BEER</a><span>Rs.280</span>
+      </div>
+    </div> 
+
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/hariyali.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - PANEER HARIYALI</a><span>Rs.219</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/achari.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - MUSHROOM ACHARI</a><span>Rs.219</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/cornachari.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - CORN ACHARI  </a><span>Rs.199</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/assorted.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - ASSORTED VEGGIES </a><span>Rs.269</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/chikenhariyali.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - CHICKEN HARIYALI TIKKA</a><span>Rs.289</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/rangdi.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - TANGDI KABAB </a><span>Rs.280</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-Specials">
+      <img src="/static/img/menu/periperi.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LIVE BBQ - PERI PERI CHICKEN TIKKA </a><span>Rs.299</span>
+      </div>
+    </div> 
+    
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/jeera.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">JEERA RICE</a><span>Rs.160</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/ghee.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">GHEE RICE</a><span>Rs.175</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/rice.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">PLAIN RICE</a><span>Rs.100</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/fried.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">VEG FRIED RICE</a><span>Rs.140</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/curd.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CURD RICE</a><span>Rs.160</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/kichadi.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">PALAK KICHADI</a><span>Rs.229</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/biryani.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN FRY PIECE BIRYANI</a><span>Rs.229</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/chicfried.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN FRIED RICE</a><span>Rs.225</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/shez.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN SHEZWAN FRIED RICE</a><span>Rs.280</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/mexi.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHICKEN MEXICAN FRIED RICE</a><span>Rs.280</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/garlicnood.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHILLY GARLIC NOODLES (VEG/EGG/CHICKEN)</a><span>Rs.199/239/289</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/hakka.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">HAKKA NOODLES (VEG/EGG/CHICKEN)</a><span>Rs.169/199/229</span>
+      </div>
+    </div>
+    <div class="col-lg-6 menu-item filter-Rn">
+      <img src="/static/img/menu/sheznood.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">SHEZWAN NOODLES (VEG/EGG/CHICKEN)</a><span>Rs.189/229/269</span>
+      </div>
+    </div>
+
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/mango.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">MANGO OREO MILKSHAKE</a><span>Rs.220</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/dark.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">DARK CHOCOLATE MILKSHAKE</a><span>Rs.220</span>
+      </div>
+    </div>    
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/nutella.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">NUTELLA MILKSHAKE</a><span>Rs.240</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/tango.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">MANGO TANGO MOCKTAILS</a><span>Rs.200</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/lavender.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">LAVENDER MOJITO MOCKTAILS</a><span>Rs.200</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/berry.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BERRY BLAST MOCKTAILS</a><span>Rs.230</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/virgin.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">VIRGIN MOJITO MOCKTAILS</a><span>Rs.200</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/bomb.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHOCO BOMB</a> <span>Rs.200</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/icecream.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">BROWNIE AND ICECREAM</a> <span>Rs.200</span>
+      </div>
+    </div> 
+    <div class="col-lg-6 menu-item filter-dd">
+      <img src="/static/img/menu/chcake.jpg" class="menu-img" alt="">
+      <div class="menu-content">
+        <a href="#">CHEESE CAKE/BLUEBERRY/STRAWBERRY/MANGO</a> <span>Rs.299</span>
+      </div>
+    </div> 
+
+  </section><!-- End Menu Section -->
+
+    
+
+    <!-- ======= Specials Section ======= -->
+    {% load static %}
+
+<section id="specials" class="specials">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>BLOGS</h2>
+      <p>Check Our Blogs</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Ignyt BBQ Food Hub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Updates on New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Craft Beer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Brewing Techniques</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Ignyt BBQ Food Hub</h3>
+                <p class="fst-italic">Barbeque Food Hub is a fantastic place to satisfy your cravings for grilled goodness! </p>
+                <p>Our awesome beer station hub🍻, is a vibrant and lively spot where beer enthusiasts like us gather to enjoy a wide selection of craft beers from around the world. 
+                  Our hub offers a cozy and inviting atmosphere, perfect for hanging out with friends and discovering new brews.<br>
+                  Along with distinct taste of beers, we have a wide variety of mouthwatering barbeque dishes, from juicy steaks to tender ribs. 
+                  It's a great spot to enjoy some delicious food with friends and family. 
+                  The ambiance is lively, and the staff is friendly. You'll definitely have a memorable dining experience there! 🍖🔥
+                </p>
+              </div>
+
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/img/food hub.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane active show" id="tab-2">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Updates on New Arrivals</h3>
+                <p class="fst-italic">Drown your thirst, not your wallet!</p>
+                <p>🎉Hey Guys! Guess what? Our beer station just got some exciting new arrivals! 🎉 
+                  We've got a fresh batch of craft beers from around the world, including some unique and limited-edition brews. 
+                  From hoppy IPAs to smooth stouts and crisp lagers, there's something for every beer lover to enjoy.
+                   So, if you're up for trying some new flavors and expanding your beer horizons, swing by our beer station and get ready for a taste adventure! Cheers, my friends! 🍻😄
+                  <br>
+                  Elevate your New Year's Eve at the ultimate bash of 2024! 🥳✨ Join us for unlimited beer, mouthwatering BBQ, 
+                  beats by the DJ till 12:30, and a feast that's set to be unforgettable! 🍻🍖 
+                  Secure your spot now with a pass at just ₹1299 and let's welcome the new year in style! 🎊
+                </p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/img/blog1.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane active show" id="tab-3">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Craft Beer</h3>
+                <p class="fst-italic">Craft Beer has a richer and more distinct taste than watery mass produced beer!</p>
+                <p>🎉 Craft beer is a true treat for beer enthusiasts like us! 🍻
+                   It's all about the art of brewing unique and flavorful beers with high-quality ingredients and a lot of creativity. 
+                   Craft breweries are known for their small-batch production, which allows them to experiment with different styles, flavors, and ingredients. 
+                   Whether you're into hoppy IPAs, rich stouts, or refreshing wheat beers, craft breweries have something for everyone. 
+                   It's always exciting to try beers from different breweries around the world and discover new flavors and aromas. 
+                   Cheers to exploring the wonderful world of craft beer! 🍺✨
+
+                </p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/img/craft.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane active show" id="tab-4">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Brewing Techniques</h3>
+                <p class="fst-italic">How is a typical day in a Brewery?</p>
+                <p>An ordinary day in a brewery depends on the kind of alcoholic beverage being brewed, a brewery’s capacity and tricks of the trade. Nevertheless, the brewing process is similar for most breweries. Here are seven steps that make up the brewing process:
+                    <br>
+                  <b> 1. Milling :</b>
+                  Beer making starts with the milling of brewing grains. The different types of malted barley are measured depending on the recipe. They are mixed and crushed into a coarse grist, neither too coarse nor too fine.
+                  <br>
+                  <b> 2. Mashing :</b>
+                  Mashing looks like porridge making. It involves the mixing of milled grain with water and methodically heating this mixture. Mashing allows the breaking down of starch in the grains and eventual conversion into sugars. These malt sugars feed the yeast when it’s fermentation time.
+                  <br>
+                  <b> 3. Lautering :</b>
+                  Lautering is a process of separating the mash (the thick porridge) into a clear sugary liquid called wort and spent grain. The separation is done using either a lauter tun or a mash filter. Usually, the sweet wort is run off first. The remaining substance is recirculated before sparging. During sparging, the extract that remains with the residual grains is rinsed off with hot water.
+                  <br>
+                 <b> 4. Boiling :</b>
+                  The sweet wort is boiled evenly and intensely to ensure its sterility. The boil may last between 50 and 120 minutes. During the boil, brewers add bittering and aromatic hops that give beer its bitterness, flavor and aroma.
+                  At the end of the boil, brewers set the wort into a whirlpool. Whirlpooling helps to collect accumulated dense solids mainly hop matter and coagulated proteins. Soon after filtration, the wort is cooled to prevent oxidation.
+                  <br>
+                  <b> 5. Fermentation :</b>
+                  The chilled wort is pumped into tanks for fermentation. Brewer’s yeast turns the wort into alcohol and carbon dioxide. The kind of yeasts used and the fermentation temperature will determine whether the final product is an ale or a lager beer.
+                  <br>
+                 <b>  6. Filtration and Conditioning :</b>
+                  We now have the beer! After fermentation, the beer is chilled and allowed to settle. Filtration and period of settlement depend on beer style. Filtering is meant to stabilize the beer’s flavor, but not all beers go through filtering.
+                  <br>
+                 <b> 7. Packaging :</b>            
+                  From the conditioning tanks, the finished beer goes into bottles, cans, and kegs. The beer is now ready to leave the brewery. Secondary fermentation may continue to offer natural carbonation. You can now enjoy a pint in a pub near you!
+               
+                
+                </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="/static/img/brew.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Specials Section -->
+
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Events</h2>
+          <p>Enjoy organised events in our Beer Longue!</p>
+        </div>
+    
+        <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+    
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="/static/img/newyear.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>New Year Parties</h3>
+                  <div class="price">
+                    <p><span>Rs. 1200/-</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Countdown to 2024 with endless vibes! 🎉 
+                    Join us for the ultimate New Year's Eve bash featuring unlimited beer, 
+                    delectable bites, beats by the DJ till 12:30, sizzling barbecue, and optional beer shots 🍻✨
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circled"></i> Special Brews: Consider brewing a special batch of beer exclusively for the New Year party. It could be a limited-edition brew that adds a unique touch to the celebration.
+                    </li>
+                    <li><i class="bi bi-check-circled"></i>  Food Pairings: Plan a menu of delicious appetizers and finger foods that pair well with the different beers on offer. Think about incorporating beer-infused dishes for an extra twist.
+                    </li>
+                    <li><i class="bi bi-check-circled"></i> Midnight Toast: Gather everyone for a special midnight toast with a favorite beer or a champagne and beer blend. Raise your glasses and cheers to a fantastic year ahead!
+                    </li>
+                  </ul>
+                  <p>
+                  
+                  Oh Guys! you won't believe how epic the New Year party was at our beer station! 🎉🍻 It was the perfect way to ring in the new year with a bang. The place was decked out in dazzling decorations, and the energy was off the charts. We danced like there was no tomorrow, laughed until our stomachs hurt, and made memories that will last a lifetime. The DJ played all the best hits, and the drinks were flowing. It was a night of pure celebration, surrounded by friends and good vibes. I can't wait for the next big event at our beer station! Cheers to an incredible New Year!🥳🎆🎊
+    
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="/static/img/gayakas.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Gayaka's Band</h3>
+                  <div class="price">
+                    <p><span>Flat 25 % OFF on total bill!</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Gayaaak sets the stage on fire at Ignyt - The Beer Lounge..🎤 Get ready for night of musical magic! 
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circled"></i>Energetic Performance: Gayaka's band delivered an incredibly energetic performance that had everyone on their feet and dancing throughout the night.
+    
+                    </li>
+                    <li><i class="bi bi-check-circled"></i>Engaging Stage Presence: The band members had a fantastic stage presence, interacting with the audience and creating a lively atmosphere. They knew how to keep the crowd engaged and entertained.
+    
+    
+                    </li>
+                    <li><i class="bi bi-check-circled"></i> Positive Vibes: The overall vibe of the performance was filled with positivity and joy. The band's enthusiasm and passion for music were contagious, spreading a sense of happiness among everyone present.
+                    </li>
+                  </ul>
+                  <p>
+                      You won't believe the incredible performance by Gayaka's band at our beer station! 
+                      They bring the house down with their amazing music and electrifying energy. 
+                      The lead singer's powerful vocals had everyone captivated, while the band members showcase their talent with impressive solos and tight harmonies. 
+                      The crowd, dancing, singing along, and having an absolute blast. It is an unforgettable night filled with great music, good friends, and of course, delicious beer. 
+                      Can't wait for the next performance at our beer station!🎶🍻
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-6">
+                  <img src="/static/img/openmic.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Open Mic Night</h3>
+                  
+                  <p class="fst-italic">
+                    Get ready to sing, sip, and sizzle at IGNYT's Open Mic Night!
+    
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check-circled"></i> Creative Expressions: The open mic night provided a platform for people to express themselves creatively. It was inspiring to witness individuals sharing their thoughts, emotions, and stories through their chosen art form.</li>
+                    <li><i class="bi bi-check-circled"></i> Open mic nights have a way of bringing people together. It was a fantastic opportunity to connect with fellow music enthusiasts, artists, and performers who share a passion for creativity.</li>
+                    <li><i class="bi bi-check-circled"></i> Platform for Growth: Open mic nights serve as a stepping stone for aspiring artists to gain experience and build confidence. It was wonderful to see individuals taking that leap and embracing the opportunity to showcase their talent.
+                    </li>
+                  </ul>
+                  <p>
+                    Oh man, let me tell you about the open mic night at our beer station! It was absolutely amazing! 🎤🍻 The atmosphere was buzzing with excitement as talented folks took the stage to showcase their skills. We had everything from soulful singers and passionate poets to hilarious comedians and mind-blowing musicians. The crowd was so supportive, cheering and clapping for each performer. It was a night of creativity, community, and unforgettable moments. I can't wait for the next open mic night at our beer station! 🎶😄🍺
+    
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+    
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    
+      </div>
+    </section>
+    <!-- End Events Section -->
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+  
+        <div class="section-title">
+          <h2>Reservation</h2>
+          <p>Book a Table</p>
+        </div>
+  
+        <form action="forms/book-a-table.php" method="post" role="form" class="email-form">
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{value.name}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" value="{{value.email}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="number" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{value.phone}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{value.date}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="time" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars" value="{{value.time}}">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars" value="{{value.number}}">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="text-center"><button type="submit">Book a Table</button></div>
+        </form>
+  
+      </div>
+    </section>
+    <!-- End Book A Table Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What they're saying about us!!</p>
+        </div>
+    
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  What a place to hang out.. loved the ambiance and the cushion seating..<br>
+                  ordered some Toit beer and they have Beer cocktails too, a lovely place to spend your night.<br>
+                  Especially don't miss out on Tandoori Chicken Chat and cheese omelette, its so cheesy …. Just so yummy 😋.. And you receive the bill in a cute trolley miniature.. ☺☺
+    
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="/static/img/dj lakky.jpg" class="testimonial-img" alt="">
+                <h3>Dj Lakky</h3>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Cozy and aesthetic place to chill and vibe. Food is top class. They have great offers. The staff is very friendly. Must visit!!!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="/static/img/mohan.jpg" class="testimonial-img" alt="">
+                <h3>Mohan Raghu</h3>
+              
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Went for lunch . Nice place. Service and food quality is good. Amazing beer !! . Paneer dynamite and broccoli cheese were awesome and very tasty. Yummy! Cheers !!
+                </p>
+                <img src="/static/img/pruthvi.jpg" class="testimonial-img" alt="">
+                <h3>Pruthvi Raghuram</h3>
+              
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Absolutely thrilled with my dining experience at Ignyt Pub! The Chicken Dynamite was an explosion of flavors, that thing was fire, and the Beer Sunset Cocktail, despite my usual aversion to alcohol, was a delightful surprise. The taste was beyond amazing, making it a must-try. Five stars without a doubt!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="/static/img/ankush.jpg" class="testimonial-img" alt="">
+                <h3>Ankush</h3>
+               
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Amazing ambience and food. Loved the service as well, the place is very affordable and a great hangout spot for college students.<br> Must visit!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="/static/img/harshitha.jpg" class="testimonial-img" alt="">
+                <h3>Harshitha vaibhav</h3>
+                
+              </div>
+            </div><!-- End testimonial item -->
+    
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    
+      </div>
+    </section>
+    <!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some photos from Our Beer station</p>
+        </div>
+      </div>
+    
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="row g-0">
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal12.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal12.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gaal.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gaal.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal5.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal4.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal7.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="/static/img/gal8.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="/static/img/gal8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+    <!-- End Gallery Section -->
+
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+      </div>
+    
+      <div data-aos="fade-up">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15556.010890549473!2d77.5640791!3d12.9075462!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1519a60e7f6d%3A0x743cf4ee0c36a725!2sIGNYT%2C%20The%20Beer%20Station!5e0!3m2!1sen!2sin!4v1705594007839!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+      </div>
+    
+      <div class="container" data-aos="fade-up">
+    
+        <div class="row mt-5">
+    
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>4th floor, 1767, 14th Main Road, 178/6 14th main road, Kumaraswamy Layout, Bengaluru, Karnataka</p>
+              </div>
+    
+              <div class="open-hours">
+                <i class="bi bi-clock"></i>
+                <h4>Open Hours:</h4>
+                <p>
+                  Monday-Sunday:<br>
+                  11:00 AM - 2300 PM
+                </p>
+              </div>
+    
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+918217779517</p>
+              </div>
+    
+            </div>
+    
+          </div>
+    
+          <div class="col-lg-8 mt-5 mt-lg-0">
+    
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" name= 'name' placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" name= 'email' placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" name = 'subject' placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="8" name ='message' placeholder="Message" required></textarea>
+              </div>
+            
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>IGNYT</h3>
+              <p>
+                178/6 14th main road, 
+             <br>20th, 50th Main Rd, 
+            <br> Kumaraswamy Layout, Bangalore
+
+                <br><br>
+                <strong>Phone:</strong> +918217779517<br>
+                <br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="http://www.twitter.com" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="http://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="http://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="http://www.skype.com" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="http://www.linkedin.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.github.com/danyel66">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.github.com/danyel66">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://www.github.com/danyel66">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to stay updated</p>
+            <form action="forms/subscribe.php" method="post">
+              <!-- <input type="email" name="email"> -->
+              {% csrf_token %}
+              {{news_form}}
+              <input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Ignyt</span></strong>. All Rights Reserved
+      </div>
+     
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a> -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
